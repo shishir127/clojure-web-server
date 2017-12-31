@@ -1,10 +1,6 @@
 # clojure-web-server
 
-FIXME: description
-
-## Installation
-
-Download from http://example.com/FIXME.
+FIXME: spike for a web server
 
 ## Usage
 
