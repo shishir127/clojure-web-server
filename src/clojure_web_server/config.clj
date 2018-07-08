@@ -42,3 +42,7 @@
                                              (dissoc-in [:db :password])
                                              (clojure.pprint/pprint)))))
     (assoc config :env environment)))
+
+(defstate config
+  :start (read-config (read-env))
+  :stop {})

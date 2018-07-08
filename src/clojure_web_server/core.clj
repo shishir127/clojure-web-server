@@ -2,12 +2,14 @@
 	(:require [clojure.string :as string]
 						[clojure.tools.logging :as log]
 						[mount.core :as mount]
-            [clojure-web-server.server]))
+            [clojure-web-server.server]
+            [clojure-web-server.config :as config]))
 
 (defn- start-api
   []
   (try
     (mount/stop)
+    (mount/start #'config/config)
     (mount/start)
     (log/info "Started api service")
     (catch Exception e
